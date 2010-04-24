@@ -1,0 +1,19 @@
+Shaon -- Perl Wiki with iPhone view
+
+Please help me with development!
+
+Require:
+Dancer
+DBIx::Simple
+SQL::Abstract
+URI::Escape
+LWP::UserAgent
+HTML::Entities
+Text::Xatena
+Cache::MemoryCache
+
+Set up server:
+Confer Dancer on CPAN (http://search.cpan.org/dist/Dancer/lib/Dancer/Deployment.pod)
+
+This programme uses following libraries:
+iWebKit (http://iwebkit.net/)
