@@ -1,0 +1,12 @@
+@media screen and (max-width: 320px)
+{
+	span.landscape{ display: none; }
+	div.map { height: 400px; }
+}
+ 
+/* Landscape */
+@media screen and (min-width: 321px)
+{
+	span.portrait{ display: none; }
+	div.map { height: 270px; }
+}

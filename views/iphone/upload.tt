@@ -1,0 +1,7 @@
+<em>[% params.message %]</em>
+Upload from Mac/PC.
+<ul>
+[% WHILE (upload = uploads.hash) %]
+<li><a href="/uploads/[% upload.filename | uri %]">[% upload.filename %]</li>
+[% END %]
+</ul>

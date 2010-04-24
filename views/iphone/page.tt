@@ -1,0 +1,17 @@
+[% USE date %]
+<div id="topbar">
+	<div id="title">shaon : [% wiki.wikiname %]</div>
+</div>
+<div id="tributton">
+	<div class="links">
+		<a href="/">List</a><a href="/new">New</a><a href="/[% wiki.wikiname | uri %]/edit">Edit</a>
+	</div>
+</div>
+<div id="content">
+	<span class="graytitle">Last upload on [% date.format(wiki.date,"%H:%M %D") %]</span>
+	<ul class="pageitem">
+		<li class="textbox">
+		[% wiki.wikidata %]
+		</li>
+	</ul>
+</div>

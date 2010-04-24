@@ -1,0 +1,17 @@
+[% USE HTML %]
+<form action="/update" method="post">
+[% IF wiki.wikiname == "New" %]
+<input type="text" name="wikiname" autofocus="autofocus" style="width: 90%" />
+[% ELSE %]
+<span style="font-size: 150%;">[% wiki.wikiname %]</span>
+<input type="hidden" name="wikiname" value="[% wiki.wikiname %]" />
+[% END %]
+<br />
+<textarea class="textareaedit" rows="23" name="wikidata">[% HTML.escape(wiki.wikidata) %]</textarea><br />
+<input type="submit" value="Update/Create" />
+<label><input type="checkbox" name="trivial" /> Trivial</label>
+</form>
+<br />
+基本的にはてな記法で。
+<br />
+Empty to delete.

@@ -1,0 +1,5 @@
+[% USE date %]
+<div class="head">
+Last updated on [% date.format(wiki.date) %] <a href="/[% wiki.wikiname | uri %]/edit">Edit</a>
+</div>
+[% wiki.wikidata %]

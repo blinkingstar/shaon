@@ -1,0 +1,34 @@
+[% USE date %]
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en-US" xml:lang="en-US">
+<head>
+<title>shaon : [% wiki.wikiname %]</title>
+<link rel="stylesheet" type="text/css" href="/css/style.css" />
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=false"></script>
+<script type="text/javascript" src="/map/map.js"></script>
+<link rel="stylesheet" type="text/css" href="/map/map.css" />
+</head>
+<body onload="initialise();">
+<div id="container">
+<h1><a href="/Front">shaon</a> : <a href="/[% wiki.wikiname | uri %]">[% wiki.wikiname %]</a></h1>
+<div id="sidebar">
+<a href="/new">new page</a><br />
+<a href="/Front">Front page</a><br />
+<a href="/upload">upload</a>
+<ul>
+[% WHILE ( latest = latests.hash ) %]
+[% NEXT UNLESS latest.wikidata %]
+<li>[% date.format(latest.date) %]<br /><a href="/[% latest.wikiname | uri %]">[% latest.wikiname %]</a></li>
+[% END %]
+</ul>
+</div>
+<div id="content">
+[% content %]
+</div>
+<div id="footer">
+Powered by <a href="http://perldancer.org/">Dancer</a> 
+</div>
+</div>
+</body>
+</html>

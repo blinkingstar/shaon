@@ -1,0 +1,10 @@
+<em>[% params.message %]</em>
+<form action="/upload" method="post" enctype="multipart/form-data">
+<input type=file name="file_upload" />
+<input type="submit" value="Upload" />
+</form>
+<ul>
+[% WHILE (upload = uploads.hash) %]
+<li><a href="/uploads/[% upload.filename | uri %]">[% upload.filename %]</li>
+[% END %]
+</ul>

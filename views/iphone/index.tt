@@ -1,0 +1,23 @@
+[% USE date %]
+[% USE TruncateByWord %]
+<div id="topbar">
+	<div id="title">shaon : page list</div>
+	<div id="rightbutton">
+		<a href="/new" class="noeffect">New</a>
+	</div>
+</div>
+<div id="content">
+	<ul class="pageitem">
+	[% WHILE ( latest = latests.hash ) %]
+	[% NEXT UNLESS latest.wikidata %]
+	<li class="menu">
+		<a class="noeffect" href="/[% latest.wikiname | uri %]">
+		<span class="comment">[% date.format(latest.date, "%m/%d %H:%M") %]</span>
+		<span class="name portrait">[% latest.wikiname | truncate_by_word(9, '...') %]</span>
+		<span class="name landscape">[% latest.wikiname | truncate_by_word(17, '...') %]</span>
+		<span class="arrow"></span>
+		</a>
+	</li>
+	[% END %]
+	</ul>
+</div>
